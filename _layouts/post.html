@@ -1,15 +1,19 @@
 ---
 layout: default
 ---
+<div class="ma1 pa3 ma5-ns ml2 ml7-ns mr7-ns">
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header>
-    <h1 itemprop="name headline">{{ page.title }}</h1>
-    <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  <header class="lh-title mb5 measure">
+    <h1 itemprop="f2 name headline">{{ page.title }}</h1>
+    <p class="f5 fw3 o-50"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
   </header>
-
-  <div itemprop="articleBody">
-    {{ content }}
+	
+  <div class="lh-copy mt1 f3 measure-wide pv3">
+	  <div itemprop="articleBody">
+	    {{ content }}
+	  </div>
   </div>
 
 </article>
+</div>
